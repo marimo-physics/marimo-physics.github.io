@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="ja" class="loading">
+
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="google-site-verification" content="GRaiEevk7EpyXnwKLGnuVz1vFe3phVUmfWFwQzGQudM" />
+		<meta name="robots" content="none"> <!--検索結果に表示されないようにする-->
+		<title>marimoの公式サイト</title>
+		<link rel="stylesheet" href="./css/marimo.css">
+ 		<script type="text/javascript" src="js/tex.js" defer></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+		 </script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({TeX:{equationNumbers:{autoNumber:"AMS"}}});
+		 </script>
+		 <script type="text/javascript" async 
+			 src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML,/www_func/MathJax/MyConfig.js">
+		 </script>
+		  <!--数式が打てるようにする-->
+
+
+</head>
+
+<body>
+
+	<header class="header-blue">
+		<div class="sp-center" id="top">
+			<div class="aps1-1">
+				<img src="./images/logo.png" alt="ロゴ">
+			</div>
+		</div>
+
+		<!--
+			<div class="aps1-3">
+					<a href="https://twitter.com/aaaaa">
+						<img src="./images/Twitter_Social_Icon_Rounded_Square_Color.png" alt="ツイッター">
+					</a>
+			</div>
+		-->
+
+		<input id="menu-cb" type="checkbox" value="off">
+			<label id="menu-icon" for="menu-cb">
+				<img src="./images/ham.png" alt="ham" width="55px">
+			</label>
+			<label id="menu-background" for="menu-cb">
+			</label>
+
+		<div class="menu" id="ham-menu">
+			<div class="menu-wrapper">
+    			<ul>
+    				<li class="menudib menu_menu">
+						<p>
+        					メニュー
+        				</p>
+        			</li>
+ 			      	<li class="menudib menu_pink">
+						<a href="./index.html">
+        					トップ
+        				</a>
+        			</li>
+ 					<li class="menudib menu_blue">
+						<a href="./shokai.html">
+        					自己紹介
+        				</a>
+        			</li>
+					<li class="menudib menu_green">
+						<a href="./study.html">
+        					数学・物理
+        				</a>
+        			</li>
+					<li class="menudib menu_lightblue">
+						<a href="./notion.html">
+        					うんちく・日記
+        				</a>
+        			</li>
+					<li class="menudib menu_gray">
+						<a href="./question.html">
+        					ご質問
+        				</a>
+        			</li>
+    			</ul>
+			</div>
+		</div>
+	</header>
+
+		<main>
+
+			<section class="section section_lightblue">
+
+				<div class="blue_box">
+					<p><b>第一章の目次</b></p>
+					<p>1-1 導入（このページ）</p>
+					<p><a href="./hphys/1-2.html">1-2 極限</a></p>	
+					<p class="koushin no-indent"><span>最終更新日</span> 2022年2月6日</p>
+				</div>
+
+				<h2>
+					&nbsp;導入
+				</h2>
+
+				<h3>
+					質点・剛体
+				</h3>
+
+				<p>
+					力学は物体の運動を記述する学問です。そのためには，ある時刻における物体の空間的な「配置」を記述する必要があります。この記述はどのように行えばよいでしょうか。ここでは身近な例として，今あなたの目の前にある消しゴムを記述する方法を考えてみましょう。
+				</p>
+
+				<p>
+					まず，消しゴムの<b class="blue">①位置</b>(position)の情報が何よりも必要でしょう。消しゴムの位置を記述するためには，まず<b class="blue">図1</b>のように我々の住む空間に，適当に $xyz$ 直交座標を引きます（座標はどのように引いても構いません。大事なのは，とにかく1つ座標を引いて，固定しておくことです）。そして，3つの座標の値 $(x,y,z)$ を指定することで記述できます。
+				</p>
+
+
+				<div class="include_img">
+					<p>
+						<img src="./images/1-1.svg" alt="図1">
+					</p>
+					<p><b class="blue">図1</b>　物体の配置を記述するための情報の説明。</p>
+				</div>
+		
+
+
+					<p>\eqref{sin}は正弦関数，\eqref{cos}は余$\sin x$弦関数の定義です．</p>
+
+					\begin{align}
+					\sin x = x-\frac{x^3}{3!}+\frac{x^5}{5!}+\cdots \label{sin} \\
+					\cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots \label{cos}
+					\end{align}
+
+					<p>インラインで数式 \(\int_0^\infty \frac{k d^3 r}{|r- r'|}\) ，\(\sin x\) を書くこともできるでしょう。</p>
+
+					<div class="blue_box2">
+						\begin{align}
+						\int_0^\infty \frac{k d^3 r}{|r- r'|}
+						\end{align}
+					</div>
+	
+					<div class="blue_box2">
+						\begin{align}
+						\sin x
+						\end{align}
+					</div>
+	
+					<div class="defbox">
+						<p><b class="blue">定義1</b> 定義する。</p>
+						
+					\begin{align}
+					\int_0^\infty \frac{k d^3 r}{|r- r'|}
+					\end{align}
+
+					</div>
+
+					<div class="reidaibox">
+						<p><b class="green">例題1</b> 求めよ。</p>
+					</div>
+
+					<div class="reibox">
+						<p><b class="green">例1</b> 求めよ。</p>
+					</div>
+
+
+
+			</section>
+
+
+		</main>
+
+		<footer>
+			<p class="footer">
+				当サイトの内容を無断で複製したり，転載することを禁じます。当サイトへの連絡は〜〜〜までお願いします（★部分は@に変える）。
+			</p>
+
+
+		</footer>
+				<div class="to-top to-top-blue">
+				<p class="to-top">▲　To Top　▲</p>
+				<a class="to-top" href="#top"></a>
+			</div>
+	</body>
+</html>

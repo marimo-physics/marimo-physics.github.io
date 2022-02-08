@@ -615,7 +615,7 @@ h2{
   padding-bottom: .1em;
   border-bottom: 3px solid #ccc;
   font-size: 20px;
-  margin:40px 0 10px;
+  margin:40px 0 0;
 }
 	.h1_green{
 		color: #12b520;
@@ -643,7 +643,7 @@ h2{
 
 @media (min-width: 701px) {
 
-	h2.h2_lightblue::after {
+	.section_lightblue > h2::after {
 	  	position: absolute;
   		bottom: -3px;
   		left: 0;
@@ -745,7 +745,7 @@ h2{
 
 @media (max-width: 700px) {
 
-	h2.h2_lightblue::after {
+	.section_lightblue > h2::after {
 	  	position: absolute;
   		bottom: -3px;
   		left: 0;
@@ -867,10 +867,10 @@ h3{
 }
 
 
-.h3_lightblue{
+.section_lightblue > h3{
 	color: #1D557A;
 }
-h3.h3_lightblue::after {
+.section_lightblue > h3::after {
   position: absolute;
   top: 1.25em;
   left: .2em;
@@ -921,7 +921,7 @@ footer p{
 	font-size: 13px;
 }
 
-p{
+.section > p{
 /*	margin-left: 15px;*/
 	text-indent: 1em;
 	margin-top: 3px;
@@ -985,11 +985,6 @@ li.li_list{
     padding: 1px 10px;
 }
 
-
-.blue_box > p{
-	text-indent: 0;
-}
-
 .blue_box b{
 	color: #0B466E;
 }
@@ -1015,9 +1010,9 @@ li.li_list{
 
 @media (min-width: 1001px) {
 
-body{
-	background-color: #fafafa;
-}
+	body{
+		background-color: #fafafa;
+	}
 
 	main{
 			width: 70%;
@@ -1026,7 +1021,7 @@ body{
 			background-color: #fafafa;
 		}
 
-	.section1{
+	.section{
 		padding: 20px 20px 40px 20px;
 	}
 
@@ -1038,8 +1033,8 @@ body{
 		background-color: #fafafa;
 	}
 
-	.section1{
-		padding: 10px 10px 25px 10px;
+	.section{
+		padding: 10px 0 25px 0;
 	}
 
 	p{
@@ -1112,6 +1107,17 @@ body{
 	width:100%;
 	/*max-width: 600px;
 	margin: 20px auto;*/
+}
+
+.include_img{
+	width:100%;
+	max-width: 500px;
+	display: block;
+	margin: 15px auto;
+}
+
+.include_img > p > img{
+	width: 100%;
 }
 
 .bf{
