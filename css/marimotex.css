@@ -24,7 +24,7 @@ p{
 }
 
 .mjx-mrow{
-	font-size: 100% !important;
+	font-size: 95% !important;
 	/*数式のサイズの調整。!importantなくても動くが，一応つけてある。*/
 }
 
