@@ -8,14 +8,17 @@
 		<meta name="google-site-verification" content="GRaiEevk7EpyXnwKLGnuVz1vFe3phVUmfWFwQzGQudM" />
 		<meta name="robots" content="none"> <!--検索結果に表示されないようにする-->
 		<title>marimoの公式サイト</title>
-		<link rel="stylesheet" href="./css/marimo.css">
-
+		<link rel="stylesheet" href="./css/marimotex.css">
+ 		<script type="text/javascript" src="js/tex.js" defer></script>
 		<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({TeX:{equationNumbers:{autoNumber:"AMS"}}});
 		 </script>
 		 <script type="text/javascript" async 
 			 src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML,/www_func/MathJax/MyConfig.js">
-		 </script> <!--数式が打てるようにする-->
+		 </script>
+		  <!--数式が打てるようにする-->
+		
+
 </head>
 
 <body>
@@ -96,13 +99,23 @@
 					<h3 class="h3_pink">
 						重要なお知らせ
 					</h3>
-					
+
 					<p>\eqref{sin}は正弦関数，\eqref{cos}は余弦関数の定義です．</p>
 
 					\begin{align}
 					\sin x = x-\frac{x^3}{3!}+\frac{x^5}{5!}+\cdots \label{sin} \\
 					\cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots \label{cos}
 					\end{align}
+
+					<p>インラインで数式 \(\int_0^\infty \frac{k d^3 r}{|r- r'|}\) ，\(\sin x\) を書くこともできるでしょう。</p>
+
+					\begin{align}
+					\int_0^\infty \frac{k d^3 r}{|r- r'|}
+					\end{align}
+
+
+
+
 
 				<h2 class="h2_lightblue">
 					&nbsp;高校物理
