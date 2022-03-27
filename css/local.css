@@ -170,7 +170,7 @@
 	/*	margin-left: 15px;*/
 		text-indent: 1em;
 		margin-top: 3px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 
 	/*bタグの装飾*/
@@ -233,7 +233,12 @@
 		color:	#8F287C;
 	}
 
-
+	/*スマホでのみ<br>で改行する*/
+	@media screen and (min-width: 766px){
+		.section_lightblue br{
+			display: none;
+		}
+	}
 
 /*おわり*/
 
