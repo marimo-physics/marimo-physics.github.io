@@ -30,6 +30,7 @@
 		font-size: 20px;
 		margin:40px 0 20px;
 		padding-left: 33px;
+		padding-bottom: 1px;
 	}
 
 		/*各色ロゴの部分*/
@@ -121,7 +122,7 @@
 	}
 	.section_lightblue > h3::after {
 	position: absolute;
-	top: 0.25em;
+	top: 0.26em;
 	left: .2em;
 	z-index: 2;
 	content: '';
