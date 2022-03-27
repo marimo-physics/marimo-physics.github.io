@@ -1,0 +1,453 @@
+
+/*
+新しい枠組み（2022/03/06より）
+・global.css：グローバルな構造（body,header,footer,main,sectionなど）の装飾を指定。
+・local.css：ローカルな構造（h1,h2,h3,p,dldtdd,その他各div装飾など）の装飾を指定。
+*/
+
+
+
+
+
+/*
+-----------------------------------------------
+各種子どもタグの装飾
+-----------------------------------------------
+*/
+
+	/*h1の装飾*/
+	h1{
+		margin: 20px 0px;
+		font-size: 23px;	
+	}
+
+
+	/*h2の装飾*/
+	h2{
+		position: relative;
+		/*padding-bottom: .1em;*/
+		border-bottom: 2px solid #aaa;
+		font-size: 20px;
+		margin:40px 0 20px;
+		padding-left: 33px;
+	}
+
+		/*各色ロゴの部分*/
+		.section_lightblue > h2:before {
+			font-family: "Font Awesome 5 Free";
+			content: "\f24d";/*アイコンのユニコード*/
+			font-weight: 900;
+			position: absolute;/*絶対位置*/
+			font-size:16px;/*サイズ*/
+			left: 7px;/*アイコンの位置*/
+			top: calc((100% - 18px) / 2);/*アイコンの位置*/
+			color: #5ab9ff; /*アイコン色*/
+			font-weight: 900;
+		}
+		.section_green > h2:before {
+			font-family: "Font Awesome 5 Free";
+			content: "\f06c";/*アイコンのユニコード*/
+			font-weight: 900;
+			position: absolute;/*絶対位置*/
+			font-size:16px;/*サイズ*/
+			left: 7px;/*アイコンの位置*/
+			top: calc((100% - 18px) / 2);/*アイコンの位置*/
+			color: #6EDE64; /*アイコン色*/
+			font-weight: 900;
+		}
+		.section_pink > h2:before {
+			font-family: "Font Awesome 5 Free";
+			content: "\f06c";/*アイコンのユニコード*/
+			font-weight: 900;
+			position: absolute;/*絶対位置*/
+			font-size:16px;/*サイズ*/
+			left: 7px;/*アイコンの位置*/
+			top: calc((100% - 18px) / 2);/*アイコンの位置*/
+			color: #F792D0; /*アイコン色*/
+			font-weight: 900;
+		}
+
+		/*after部分の色の指定*/
+		.section_lightblue > h2::after {
+			background-color: #3498db;
+		}
+		.section_green > h2::after {
+			background-color: #65CC5C;
+		}
+		.section_pink > h2::after {
+			background-color: #f354b6;
+		}
+
+	@media (min-width: 701px) {
+
+		h2::after {
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			z-index: 2;
+			content: '';
+			width: 25%;
+			height: 2px;
+		}
+	}
+
+	@media (max-width: 700px) {
+		h2::after {
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			z-index: 2;
+			content: '';
+			width: 35%;
+			height: 2px;
+		}
+	}
+
+	/*h3の設定*/
+	h3{
+		position: relative;
+		padding: 0 1em .25em 1.5em;
+		font-size: 16px;
+		margin-top: 25px;
+	/*  border: 1px solid #ccc;
+	border-top: 3px solid #3498db;
+	background: -webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+	background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 1) inset;*/
+	}
+
+	.section_lightblue > h3{
+		color: #2a89E7;
+	}
+	.section_lightblue > h3::after {
+	position: absolute;
+	top: 0.25em;
+	left: .2em;
+	z-index: 2;
+	content: '';
+	width: 10px;
+	height: 10px;
+	border: 3px solid #248BF2;
+	border-radius: 100%
+	}
+
+	.section_green > h3{
+		color: #276E20;
+	}
+	.section_green > h3::after {
+	position: absolute;
+	top: 0.3em;
+	left: .2em;
+	z-index: 2;
+	content: '';
+	width: 10px;
+	height: 10px;
+	border: 3px solid #65CC5C;
+	border-radius: 100%
+	}
+
+	.section_pink > h3{
+		color: #8F287C;
+	}
+	.section_pink > h3::after {
+	position: absolute;
+	top: 0.3em;
+	left: .2em;
+	z-index: 2;
+	content: '';
+	width: 10px;
+	height: 10px;
+	border: 3px solid #FF47DD;
+	border-radius: 100%
+	}
+
+	/*pタグの装飾*/
+	p{
+		font-size: 15px ;
+	}	
+	.section > p{
+	/*	margin-left: 15px;*/
+		text-indent: 1em;
+		margin-top: 3px;
+		margin-bottom: 5px;
+	}
+
+	/*bタグの装飾*/
+	.section_lightblue b{
+		color: #2a89E7;
+	}
+	b.green{
+		color: #329832;
+	}
+
+	/*ul,ol（箇条書き）の設定*/
+	section ul, ol {
+		padding-left: 30px ;/*リスト上の余白*/
+	}
+	.ul {
+		margin : 10px 0;
+		font-size: 15px;
+	}
+	.ul > li{
+		margin-top : 6px;
+	}
+
+	/*aタグの装飾*/
+	.cp_link {
+		padding: 0.1em 0.2em 0em 0.2em;
+		background-image: linear-gradient(rgba(0,0,0,0) 50%, rgb(101, 200, 97) 50%);
+		background-position: 0 0;
+		text-decoration: none;
+		font-weight: bold;
+		background-size: auto 200%;
+		transition: .3s;
+		color: rgb(60, 204, 55);
+	}
+	.cp_link:hover {
+		background-position: 0 100%;
+		color: #fff;
+	}
+
+	/*dl,dd,dtの装飾*/
+	dl{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	dt{
+		font-weight: bold;
+		font-size:15px;
+		margin-top: 10px;
+	}
+	dd{
+		margin-left: 20px;
+		font-size: 15px;
+	}
+	.event-dd-b > dt{
+		color:	#0B72D9;
+	}
+	.event-dd-g > dt{
+		color:	#276E20;
+	}
+	.event-dd-p > dt{
+		color:	#8F287C;
+	}
+
+
+
+/*おわり*/
+
+
+
+
+
+/*
+-----------------------------------------------
+その他，各種div等の装飾
+-----------------------------------------------
+*/
+
+
+a.p{
+	margin-top: 20px;
+	margin-bottom: 5px;	
+	margin-left: 15px
+}
+
+.red{
+	color: #ee2222;
+}
+
+li.li_list{
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.no-indent{
+	text-indent: 0;
+}
+
+.bf{
+	/*color:#1D557A;*/
+	font-weight: bold;
+}
+
+.center{
+	text-align: center;
+}
+
+.no-indent{
+	text-indent: 0;
+}
+
+.bf{
+	/*color:#1D557A;*/
+	font-weight: bold;
+}
+
+.center{
+	text-align: center;
+}
+
+
+
+	/*数式のサイズの調整。!importantなくても動くが，一応つけてある。*/
+	.mjx-mrow{
+		font-size: 90% !important;
+	}
+
+	/*丸囲みの装飾*/
+	.defbox{
+		border: 2px solid #3498db;	/* 線の太さ・種類・色 */
+		border-radius: 10px;
+		margin: 15px 0;	/* 外側の余白 上下・左右 */
+		padding: 10px 15px;	/* 内側の余白 上下・左右 */
+		position: relative;
+	}
+	.reidaibox{
+		border: 2px solid #329832;	/* 線の太さ・種類・色 */
+		border-radius: 10px;
+		margin: 15px 0;	/* 外側の余白 上下・左右 */
+		padding: 10px 15px;	/* 内側の余白 上下・左右 */
+		position: relative;
+	}
+	.warning{
+		border: 2px solid #F2BA00;	/* 線の太さ・種類・色 */
+		border-radius: 10px;
+		margin: 15px 0;	/* 外側の余白 上下・左右 */
+		padding: 12px 20px 12px 50px;	/* 内側の余白 上下・左右 */
+		position: relative;
+	}
+	.warning::before {
+		font-family: "Font Awesome 5 Free";
+		content: "\f071";/*アイコンのユニコード*/
+		font-weight: 900;
+		position: absolute;/*絶対位置*/
+		font-size:16px;/*サイズ*/
+		left: 20px;/*アイコンの位置*/
+		top: calc(12px + (7px) / 2);/*アイコンの位置*/
+		color: #F2BA00; /*アイコン色*/
+		font-weight: 900;
+	  }
+
+	/*「最終更新日」部分の装飾*/
+	.section_lightblue .koushin > span {
+		background: #248BF2; /*背景色*/
+		padding: 0.17em 0.32em 0.17em;/*文字周りの余白*/
+		color: white;
+		border-radius: 0.7em;/*角の丸み*/
+		font-size: 14px;
+	}
+	.section_green .koushin > span {
+		background: #00A86D; /*背景色*/
+		padding: 0.17em 0.32em 0.17em;/*文字周りの余白*/
+		color: white;
+		border-radius: 0.7em;/*角の丸み*/
+		font-size: 14px;
+	}
+	.section_pink .koushin > span {
+		background: #eb72bc; /*背景色*/
+		padding: 0.17em 0.32em 0.17em;/*文字周りの余白*/
+		color: white;
+		border-radius: 0.7em;/*角の丸み*/
+		font-size: 14px;
+	}
+	.koushin {
+		color: #1D557A;
+		margin-top: 10px;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+	/*青い箱*/
+	.blue_box {
+		background-color: #d6eaff;
+	    border: 2px solid #fff;
+	    box-shadow: 0 0 0 2px #d6eaff;
+	    margin: 15px 0;
+	    padding: 15px 15px;
+	}
+	.blue_box2 {
+	    background-color: #d6eaff;
+	    margin: 15px 0;
+	    padding: 10px 20px;
+	}
+	.blue_box2_TeX {
+	    background-color: #d6eaff;
+	    margin: 15px 0;
+	    padding: 1px 10px;
+	}
+	.blue_box b{
+		color: #0B466E;
+	}
+	.blue_box3 {
+		border-left: 5px solid #248BF2;	/* 線の太さ・種類・色 */
+		margin: 15px 0;	/* 外側の余白 上下・左右 */
+		padding: 10px 15px;	/* 内側の余白 上下・左右 */
+		position: relative;
+		background-color: #d6eaff;
+		border-radius: 5px;
+	}
+
+	/*緑の箱*/
+	.green_box {
+		background-color: #D5F2CE;
+	    border: 2px solid #fff;
+	    box-shadow: 0 0 0 2px #D5F2CE;
+	    margin: 15px 0;
+	    padding: 15px 15px;
+	}
+	.green_box2 {
+	    background-color: #D5F2CE;
+	    margin: 15px 0;
+	    padding: 10px 20px;
+	}
+	.green_box3 {
+		border-left: 5px solid #00A86D;	/* 線の太さ・種類・色 */
+		margin: 15px 0;	/* 外側の余白 上下・左右 */
+		padding: 10px 15px;	/* 内側の余白 上下・左右 */
+		position: relative;
+		background-color: #D5F2CE;
+		border-radius: 5px;
+	}
+
+	/*ピンクの箱*/
+	.pink_box {
+		background-color: #FBE3FF;
+	    border: 2px solid #fff;
+	    box-shadow: 0 0 0 2px #FBE3FF;
+	    margin: 15px 0;
+	    padding: 15px 15px;
+	}
+	.pink_box2 {
+	    background-color: #FBE3FF;
+	    margin: 15px 0;
+	    padding: 10px 20px;
+	}
+	.pink_box3 {
+		border-left: 5px solid #eb72bc;	/* 線の太さ・種類・色 */
+		margin: 15px 0;	/* 外側の余白 上下・左右 */
+		padding: 10px 15px;	/* 内側の余白 上下・左右 */
+		position: relative;
+		background-color: #FBE3FF;
+		border-radius: 5px;
+	}
+
+	/*画像の挿入*/
+	.include_img{
+		width:100%;
+		max-width: 500px;
+		display: block;
+		margin: 15px auto;
+	}
+	.include_img > p > img{
+		width: 100%;
+	}
+
+
+
+
+
+
+
+
