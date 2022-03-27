@@ -423,28 +423,28 @@ body{
 		}
 
 		.menu_pink{
-			background-color: rgba(48,142,204,0.65);
+			background-color: rgba(70, 152, 207, 0.8);
 			border-radius: 4px;
 		}
 
 		.menu_green{
 			border-radius: 4px;
-			background-color: rgba(48,142,204,0.75);
+			background-color: rgba(70, 152, 207, 0.8);
 		}
 
 		.menu_blue{
 			border-radius: 4px;
-			background-color: rgba(48,142,204,0.75);
+			background-color: rgba(70, 152, 207, 0.8);
 		}
 
 		.menu_lightblue{
 			border-radius: 4px;
-			background-color: rgba(48,142,204,0.75);
+			background-color: rgba(70, 152, 207, 0.8);
 		}
 
 		.menu_gray{
 			border-radius: 4px;
-			background-color: rgba(48,142,204,0.75);
+			background-color: rgba(70, 152, 207, 0.8);
 		}
 
 		.menu_pink :before {
